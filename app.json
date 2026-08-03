@@ -1,0 +1,30 @@
+{
+  "expo": {
+    "name": "MathLearn",
+    "slug": "MathLearn",
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "icon": "./assets/mathlearn-icon-v2.png",
+    "userInterfaceStyle": "light",
+    "ios": {
+      "supportsTablet": true,
+      "icon": "./assets/mathlearn-icon-v2.png"
+    },
+    "android": {
+      "icon": "./assets/mathlearn-icon-v2.png",
+      "adaptiveIcon": {
+        "foregroundImage": "./assets/mathlearn-icon-v2.png",
+        "backgroundColor": "#32A9ED"
+      },
+      "package": "com.kangli05404.MathLearn"
+    },
+    "web": {
+      "favicon": "./assets/mathlearn-icon-v2.png"
+    },
+    "extra": {
+      "eas": {
+        "projectId": "e7235688-c73d-4983-a374-d1edf47e9314"
+      }
+    }
+  }
+}
