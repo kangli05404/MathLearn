@@ -62,17 +62,9 @@ function createAnswerChoices(
 function createQuestion() {
     const count = randomNumber(1, 9);
 
-    const objectIndex = randomNumber(
-        0,
-        objectTypes.length - 1
-    );
+    const objectIndex = randomNumber(0,objectTypes.length - 1);
 
-    return {
-        count,
-        object: objectTypes[objectIndex],
-        answers:
-            createAnswerChoices(count),
-    };
+    return {count, object: objectTypes[objectIndex],answers:createAnswerChoices(count),};
 }
 
 export default function CountingExercise({
