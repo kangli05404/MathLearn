@@ -74,6 +74,7 @@ function numberToWords(number) {
     return `${tensWords[tensDigit]}-${smallNumbers[onesDigit]}`;
 }
 
+// Randomises the order of the answer choices
 function shuffle(items) {
     return [...items].sort(
         () => Math.random() - 0.5
@@ -258,6 +259,7 @@ export default function NumberRecognitionExercise({
         );
     }
 
+    // Determines the feedback and question display format
     const answerIsCorrect =
         selectedAnswer ===
         question.correctAnswer;

@@ -34,6 +34,7 @@ const objectTypes = [
     },
 ];
 
+// Generates a random number within the given range
 function randomNumber(minimum, maximum) {
     return (
         Math.floor(
@@ -62,9 +63,9 @@ function createAnswerChoices(
 function createQuestion() {
     const count = randomNumber(1, 9);
 
-    const objectIndex = randomNumber(0,objectTypes.length - 1);
+    const objectIndex = randomNumber(0, objectTypes.length - 1);
 
-    return {count, object: objectTypes[objectIndex],answers:createAnswerChoices(count),};
+    return { count, object: objectTypes[objectIndex], answers: createAnswerChoices(count), };
 }
 
 export default function CountingExercise({
@@ -91,6 +92,7 @@ export default function CountingExercise({
         useState(false);
 
     function selectAnswer(answer) {
+        // Prevents the learner from changing an answer after selecting it
         if (selectedAnswer !== null) {
             return;
         }
@@ -112,6 +114,7 @@ export default function CountingExercise({
         ) {
             setFinished(true);
 
+            // Notifies App.js to complete today's learning goal
             if (onComplete) {
                 onComplete();
             }

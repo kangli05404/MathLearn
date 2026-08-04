@@ -44,6 +44,7 @@ function createQuestion() {
             ? 'ascending'
             : 'descending';
 
+    // Stores the correct order for checking the learner's sequence
     const correctOrder = [...numbers].sort(
         (firstNumber, secondNumber) => {
             if (direction === 'ascending') {
@@ -95,6 +96,7 @@ export default function NumberSequenceExercise({
         useState(false);
 
     function selectNumber(number) {
+        // Prevents duplicate selections and changes after submission
         if (
             answerSubmitted ||
             selectedNumbers.includes(number)
@@ -134,6 +136,7 @@ export default function NumberSequenceExercise({
         }
     }
 
+    // Clears the learner's order using empty array before it is submitted
     function clearSelection() {
         if (!answerSubmitted) {
             setSelectedNumbers([]);

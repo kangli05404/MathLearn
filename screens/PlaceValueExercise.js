@@ -42,11 +42,12 @@ function createQuestion() {
     const tens = Math.floor(number / 10);
     const ones = number % 10;
 
-    const place =Math.random() < 0.5? 'tens': 'ones';
+    // Randomly asks for either the tens or ones digit
+    const place = Math.random() < 0.5 ? 'tens' : 'ones';
 
     const correctAnswer = place === 'tens' ? tens : ones;
 
-    return {number,tens,ones,place,correctAnswer,answers:createAnswerChoices(correctAnswer),};
+    return { number, tens, ones, place, correctAnswer, answers: createAnswerChoices(correctAnswer), };
 }
 
 export default function PlaceValueExercise({

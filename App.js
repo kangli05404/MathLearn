@@ -24,6 +24,7 @@ import PlaceValueExercise from './screens/PlaceValueExercise';
 import NumberRecognitionExercise from './screens/NumberRecognitionExercise';
 import NumberSequenceExercise from './screens/NumberSequenceExercise';
 
+// Unique AsyncStorage key used to save the learner's daily-goal record.
 const DAILY_GOAL_KEY =
   '@mathlearn_daily_goal';
 
@@ -43,6 +44,7 @@ function getTodayDate() {
   return `${year}-${month}-${day}`;
 }
 
+//Central configuration for the four learning activities.
 const topics = [
   {
     id: 1,
@@ -86,6 +88,7 @@ const topics = [
   },
 ];
 
+// Reusable card for selecting an exercise
 function TopicCard({ topic, onOpen }) {
   return (
     <Pressable
